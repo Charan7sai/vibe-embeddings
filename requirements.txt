@@ -1,0 +1,8 @@
+requests
+librosa
+soundfile
+sentence-transformers
+pandas
+scikit-learn
+faiss-cpu
+python-dotenv
