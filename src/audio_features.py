@@ -47,7 +47,10 @@ def extract_features(file_path):
     (RMS loudness), brightness (spectral centroid), zcr (noisiness proxy),
     and a 12-dim chroma vector (rough key/pitch profile)."""
     y, sr = librosa.load(file_path, sr=22050, mono=True)
+    return features_from_signal(y, sr)
 
+
+def features_from_signal(y, sr):
     tempo, _ = librosa.beat.beat_track(y=y, sr=sr)
     rms = librosa.feature.rms(y=y)[0]
     spectral_centroid = librosa.feature.spectral_centroid(y=y, sr=sr)[0]
@@ -61,6 +64,17 @@ def extract_features(file_path):
         "zcr": float(np.mean(zcr)),
         "chroma_mean": chroma.mean(axis=1).tolist(),
     }
+
+
+def warm_up():
+    """librosa JIT-compiles its beat tracker the first time it runs, which
+    made the first live song lookup in a fresh container take ~30s instead
+    of ~5s. Running it once on a few seconds of synthetic audio at startup
+    moves that cost off the first visitor."""
+    sr = 22050
+    t = np.linspace(0, 4, 4 * sr, endpoint=False)
+    clicks = (np.sin(2 * np.pi * 2 * t) > 0.99).astype(float)  # 120 BPM pulse
+    features_from_signal((0.3 * np.sin(2 * np.pi * 440 * t) + clicks).astype(np.float32), sr)
 
 
 def get_features_for_track(track):

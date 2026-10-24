@@ -1,8 +1,13 @@
 requests
 librosa
 soundfile
+pyarrow
 sentence-transformers
 pandas
 scikit-learn
-faiss-cpu
+scipy
+transformers
 python-dotenv
+fastapi
+uvicorn
+streamlit

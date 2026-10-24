@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <style>
+    .venom { display: none; }
+    @media (prefers-color-scheme: dark) {
+      .spidey { display: none; }
+      .venom { display: inline; }
+    }
+  </style>
+
+  <!-- light mode: white spider on Spider-Man red -->
+  <g class="spidey">
+    <rect width="64" height="64" rx="12" fill="#C8102E"/>
+    <g fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M29 24 L22 17 L19 7"/>
+      <path d="M28.5 28 L18 24 L11 14"/>
+      <path d="M28.5 32 L18 36 L11 46"/>
+      <path d="M29.5 36 L23 45 L21 56"/>
+      <path d="M35 24 L42 17 L45 7"/>
+      <path d="M35.5 28 L46 24 L53 14"/>
+      <path d="M35.5 32 L46 36 L53 46"/>
+      <path d="M34.5 36 L41 45 L43 56"/>
+    </g>
+    <ellipse cx="32" cy="20.5" rx="4" ry="4.6" fill="#FFFFFF"/>
+    <path d="M32 25 C37.5 27.5 37.5 38 32 47 C26.5 38 26.5 27.5 32 25 Z" fill="#FFFFFF"/>
+  </g>
+
+  <!-- dark mode: Venom-style angular white spider on black -->
+  <g class="venom">
+    <rect width="64" height="64" rx="12" fill="#0B0B0D"/>
+    <g fill="none" stroke="#FFFFFF" stroke-width="3.6" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="8">
+      <path d="M29 22 L17 15 L13 3"/>
+      <path d="M28 27 L13 24 L4 12"/>
+      <path d="M28 33 L13 38 L4 50"/>
+      <path d="M29 38 L19 49 L16 61"/>
+      <path d="M35 22 L47 15 L51 3"/>
+      <path d="M36 27 L51 24 L60 12"/>
+      <path d="M36 33 L51 38 L60 50"/>
+      <path d="M35 38 L45 49 L48 61"/>
+    </g>
+    <path d="M32 11 L36.5 18.5 L32 23 L27.5 18.5 Z" fill="#FFFFFF"/>
+    <path d="M32 23 C40 27 39 41 32 54 C25 41 24 27 32 23 Z" fill="#FFFFFF"/>
+  </g>
+</svg>

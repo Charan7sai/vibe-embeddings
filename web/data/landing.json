@@ -1,0 +1,230 @@
+{
+  "characters": [
+    {
+      "name": "Spider-Man",
+      "note": "Tom Holland",
+      "image": "https://upload.wikimedia.org/wikipedia/en/0/0f/Tom_Holland_as_Spider-Man.jpg",
+      "article": "https://en.wikipedia.org/wiki/Peter_Parker_(Marvel_Cinematic_Universe)",
+      "seed": {
+        "type": "movie",
+        "query": "Spider-Man: No Way Home"
+      },
+      "license": "Fair use",
+      "author": "",
+      "source_page": "https://en.wikipedia.org/wiki/File:Tom_Holland_as_Spider-Man.jpg",
+      "free": false
+    },
+    {
+      "name": "The Joker",
+      "note": "Heath Ledger",
+      "image": "https://upload.wikimedia.org/wikipedia/en/2/2b/Heath_Ledger_as_the_Joker_in_The_Dark_Knight.png",
+      "article": "https://en.wikipedia.org/wiki/Joker_(The_Dark_Knight)",
+      "seed": {
+        "type": "movie",
+        "query": "The Dark Knight"
+      },
+      "license": "Fair use",
+      "author": "",
+      "source_page": "https://en.wikipedia.org/wiki/File:Heath_Ledger_as_the_Joker_in_The_Dark_Knight.png",
+      "free": false
+    },
+    {
+      "name": "Darth Vader",
+      "note": "Star Wars",
+      "image": "https://upload.wikimedia.org/wikipedia/en/0/0b/Darth_Vader_in_The_Empire_Strikes_Back.jpg",
+      "article": "https://en.wikipedia.org/wiki/Darth_Vader",
+      "seed": {
+        "type": "movie",
+        "query": "The Empire Strikes Back"
+      },
+      "license": "Fair use",
+      "author": "",
+      "source_page": "https://en.wikipedia.org/wiki/File:Darth_Vader_in_The_Empire_Strikes_Back.jpg",
+      "free": false
+    },
+    {
+      "name": "Tony Stark",
+      "note": "Robert Downey Jr.",
+      "image": "https://upload.wikimedia.org/wikipedia/en/f/f2/Robert_Downey_Jr._as_Tony_Stark_in_Avengers_Infinity_War.jpg",
+      "article": "https://en.wikipedia.org/wiki/Tony_Stark_(Marvel_Cinematic_Universe)",
+      "seed": {
+        "type": "movie",
+        "query": "Iron Man"
+      },
+      "license": "Fair use",
+      "author": "Marvel Studios",
+      "source_page": "https://en.wikipedia.org/wiki/File:Robert_Downey_Jr._as_Tony_Stark_in_Avengers_Infinity_War.jpg",
+      "free": false
+    },
+    {
+      "name": "Jack Sparrow",
+      "note": "Johnny Depp",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/6/64/Johnny_Depp_as_Captain_Jack_Sparrow_in_Queensland%2C_Australia.jpg",
+      "article": "https://en.wikipedia.org/wiki/Jack_Sparrow",
+      "seed": {
+        "type": "movie",
+        "query": "Pirates of the Caribbean: The Curse of the Black Pearl"
+      },
+      "license": "CC BY-SA 4.0",
+      "author": "Author: NJM2010 Cropped by: Islam90",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Johnny_Depp_as_Captain_Jack_Sparrow_in_Queensland,_Australia.jpg",
+      "free": true
+    },
+    {
+      "name": "Neo",
+      "note": "Keanu Reeves",
+      "image": "https://upload.wikimedia.org/wikipedia/en/c/c6/NeoTheMatrix.jpg",
+      "article": "https://en.wikipedia.org/wiki/Neo_(The_Matrix)",
+      "seed": {
+        "type": "movie",
+        "query": "The Matrix"
+      },
+      "license": "Fair use",
+      "author": "",
+      "source_page": "https://en.wikipedia.org/wiki/File:NeoTheMatrix.jpg",
+      "free": false
+    },
+    {
+      "name": "John Wick",
+      "note": "Keanu Reeves",
+      "image": "https://upload.wikimedia.org/wikipedia/en/9/9f/John_Wick_Keanu.jpeg",
+      "article": "https://en.wikipedia.org/wiki/John_Wick_(character)",
+      "seed": {
+        "type": "movie",
+        "query": "John Wick"
+      },
+      "license": "Fair use",
+      "author": "",
+      "source_page": "https://en.wikipedia.org/wiki/File:John_Wick_Keanu.jpeg",
+      "free": false
+    },
+    {
+      "name": "Indiana Jones",
+      "note": "Harrison Ford",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3d/Indianajones4.jpg/960px-Indianajones4.jpg",
+      "article": "https://en.wikipedia.org/wiki/Indiana_Jones_(character)",
+      "seed": {
+        "type": "movie",
+        "query": "Raiders of the Lost Ark"
+      },
+      "license": "CC BY-SA 2.0",
+      "author": "John Griffiths",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Indianajones4.jpg",
+      "free": true
+    }
+  ],
+  "singers": [
+    {
+      "name": "Kanye West",
+      "note": "Hip-hop",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5c/Kanye_West_at_the_2009_Tribeca_Film_Festival_%28crop_2%29.jpg/960px-Kanye_West_at_the_2009_Tribeca_Film_Festival_%28crop_2%29.jpg",
+      "article": "https://en.wikipedia.org/wiki/Kanye_West",
+      "seed": {
+        "type": "song",
+        "query": "Heartless Kanye West"
+      },
+      "license": "Public domain",
+      "author": "David Shankbone",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Kanye_West_at_the_2009_Tribeca_Film_Festival_(crop_2).jpg",
+      "free": true
+    },
+    {
+      "name": "The Weeknd",
+      "note": "R&B",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a0/The_Weeknd_Portrait_by_Brian_Ziff.jpg/960px-The_Weeknd_Portrait_by_Brian_Ziff.jpg",
+      "article": "https://en.wikipedia.org/wiki/The_Weeknd",
+      "seed": {
+        "type": "song",
+        "query": "Blinding Lights The Weeknd"
+      },
+      "license": "CC BY-SA 4.0",
+      "author": "Brian Ziff",
+      "source_page": "https://commons.wikimedia.org/wiki/File:The_Weeknd_Portrait_by_Brian_Ziff.jpg",
+      "free": true
+    },
+    {
+      "name": "Billie Eilish",
+      "note": "Alt pop",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/c/c7/BillieEilishO2140725-39_-_54665577407_%28cropped%29.jpg",
+      "article": "https://en.wikipedia.org/wiki/Billie_Eilish",
+      "seed": {
+        "type": "song",
+        "query": "Birds of a Feather Billie Eilish"
+      },
+      "license": "CC BY 4.0",
+      "author": "Raph_PH",
+      "source_page": "https://commons.wikimedia.org/wiki/File:BillieEilishO2140725-39_-_54665577407_(cropped).jpg",
+      "free": true
+    },
+    {
+      "name": "Freddie Mercury",
+      "note": "Queen",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/Freddie_Mercury_performing_in_New_Haven%2C_CT%2C_November_1977.jpg/960px-Freddie_Mercury_performing_in_New_Haven%2C_CT%2C_November_1977.jpg",
+      "article": "https://en.wikipedia.org/wiki/Freddie_Mercury",
+      "seed": {
+        "type": "song",
+        "query": "Bohemian Rhapsody Queen"
+      },
+      "license": "CC BY-SA 3.0",
+      "author": "Carl Lender",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Freddie_Mercury_performing_in_New_Haven,_CT,_November_1977.jpg",
+      "free": true
+    },
+    {
+      "name": "Beyoncé",
+      "note": "R&B",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/b/b7/Beyonc%C3%A9_-_Tottenham_Hotspur_Stadium_-_1st_June_2023_%2810_of_118%29_%2852946364598%29_%28best_crop%29.jpg",
+      "article": "https://en.wikipedia.org/wiki/Beyoncé",
+      "seed": {
+        "type": "song",
+        "query": "Halo Beyonce"
+      },
+      "license": "CC BY 2.0",
+      "author": "Raph_PH",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Beyonc%C3%A9_-_Tottenham_Hotspur_Stadium_-_1st_June_2023_(10_of_118)_(52946364598)_(best_crop).jpg",
+      "free": true
+    },
+    {
+      "name": "Kendrick Lamar",
+      "note": "Hip-hop",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/18/KendrickSZASPurs230725-144_%28cropped%29_desaturated.jpg/960px-KendrickSZASPurs230725-144_%28cropped%29_desaturated.jpg",
+      "article": "https://en.wikipedia.org/wiki/Kendrick_Lamar",
+      "seed": {
+        "type": "song",
+        "query": "Not Like Us Kendrick Lamar"
+      },
+      "license": "CC BY 4.0",
+      "author": "Raph_PH",
+      "source_page": "https://commons.wikimedia.org/wiki/File:KendrickSZASPurs230725-144_(cropped)_desaturated.jpg",
+      "free": true
+    },
+    {
+      "name": "Michael Jackson",
+      "note": "Pop",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/Michael_Jackson_1983_%283x4_cropped%29_%28contrast%29.jpg/960px-Michael_Jackson_1983_%283x4_cropped%29_%28contrast%29.jpg",
+      "article": "https://en.wikipedia.org/wiki/Michael_Jackson",
+      "seed": {
+        "type": "song",
+        "query": "Billie Jean Michael Jackson"
+      },
+      "license": "Public domain",
+      "author": "Matthew Rolston; Distributed by Epic Records",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Michael_Jackson_1983_(3x4_cropped)_(contrast).jpg",
+      "free": true
+    },
+    {
+      "name": "Sabrina Carpenter",
+      "note": "Pop",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/6/61/Sabrina_Carpenter_-_O2_Arena_2025_-_086_%28cropped_2%29.jpg",
+      "article": "https://en.wikipedia.org/wiki/Sabrina_Carpenter",
+      "seed": {
+        "type": "song",
+        "query": "Espresso Sabrina Carpenter"
+      },
+      "license": "CC BY 2.0",
+      "author": "Raph_PH",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Sabrina_Carpenter_-_O2_Arena_2025_-_086_(cropped_2).jpg",
+      "free": true
+    }
+  ]
+}

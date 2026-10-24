@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vibe Embeddings</title>
+  <meta name="description" content="Match songs and films by mood. Pick a song and get the movies that feel like it, or the other way round.">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <meta name="theme-color" content="#F4F1EA" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0D0D0F" media="(prefers-color-scheme: dark)">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=15">
+  <script>
+    // apply a saved theme before first paint, so there's no flash
+    try {
+      var t = localStorage.getItem("theme");
+      if (t === "light" || t === "dark") document.documentElement.setAttribute("data-theme", t);
+    } catch (e) {}
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="wordmark" href="#/" aria-label="Vibe Embeddings home">
+        <svg class="wordmark-mark" viewBox="0 0 64 64" aria-hidden="true">
+          <g fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M29 24 L22 17 L19 7"/><path d="M28.5 28 L18 24 L11 14"/>
+            <path d="M28.5 32 L18 36 L11 46"/><path d="M29.5 36 L23 45 L21 56"/>
+            <path d="M35 24 L42 17 L45 7"/><path d="M35.5 28 L46 24 L53 14"/>
+            <path d="M35.5 32 L46 36 L53 46"/><path d="M34.5 36 L41 45 L43 56"/>
+          </g>
+          <ellipse cx="32" cy="20.5" rx="4" ry="4.6" fill="currentColor"/>
+          <path d="M32 25 C37.5 27.5 37.5 38 32 47 C26.5 38 26.5 27.5 32 25 Z" fill="currentColor"/>
+        </svg>
+        <span>Vibe Embeddings</span>
+      </a>
+      <nav class="site-nav" aria-label="Main">
+        <a href="#/explore" data-nav="explore">Explore</a>
+        <a href="#how" data-nav="how">How it works</a>
+        <button class="icon-btn" id="theme-toggle" type="button" aria-label="Switch to dark mode">
+          <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" fill="currentColor"/></svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2" fill="currentColor"/><g stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></g></svg>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ================= landing ================= -->
+    <section id="landing" class="view">
+      <div class="container intro">
+        <div class="intro-main">
+        <h1 class="intro-title">Pair a song with a film,<br>or a film with a song.</h1>
+        <p class="intro-stats" id="intro-stats">2,480 English songs · 2,992 English films · matched on 24 moods</p>
+        <form class="quick" id="quick-form" autocomplete="off">
+          <div class="quick-modes" role="radiogroup" aria-label="Start from">
+            <label><input type="radio" name="quick-mode" value="song" checked><span>Song</span></label>
+            <label><input type="radio" name="quick-mode" value="movie"><span>Film</span></label>
+            <label><input type="radio" name="quick-mode" value="genre"><span>Genre</span></label>
+            <label><input type="radio" name="quick-mode" value="text"><span>Mood</span></label>
+          </div>
+          <div class="quick-row">
+            <input id="quick-input" type="text" maxlength="140" aria-label="What to start from" placeholder="Blinding Lights, Oppenheimer, a rainy drive...">
+            <button class="btn btn-primary" type="submit">Pair it</button>
+          </div>
+        </form>
+        </div>
+        <div class="intro-art" id="intro-art" aria-hidden="true"></div>
+      </div>
+
+      <div class="container board-wrap">
+        <div class="board-head">
+          <h2>Pairings</h2>
+          <p>Worked out by the model from this week's trending songs and the newest films. Click one to open it.</p>
+        </div>
+        <ol class="board" id="board"></ol>
+      </div>
+
+      <div class="container cast">
+        <div class="cast-row">
+          <div class="cast-label">
+            <h2>On screen</h2>
+            <p>Click a character to start from their film.</p>
+          </div>
+          <div class="cast-grid" id="cast-characters"></div>
+        </div>
+        <div class="cast-row">
+          <div class="cast-label">
+            <h2>On stage</h2>
+            <p>Click a singer to start from their best-known song.</p>
+          </div>
+          <div class="cast-grid" id="cast-singers"></div>
+        </div>
+      </div>
+
+      <div class="container how" id="how">
+        <h2 class="section-title">How a match is made</h2>
+        <p class="how-intro">One of the pairings above, taken apart.</p>
+        <div class="anatomy" id="anatomy"></div>
+        <div class="mood-vocab">
+          <p class="mood-vocab-label">Every song and film is described with the same 24 words:</p>
+          <div class="chips" id="mood-vocab"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= explore ================= -->
+    <section id="explore" class="view" hidden>
+      <div class="container explore-head">
+        <div class="mode-switch" role="tablist" aria-label="Start from">
+          <button role="tab" data-mode="song" aria-selected="true">Song</button>
+          <button role="tab" data-mode="movie" aria-selected="false">Movie</button>
+          <button role="tab" data-mode="genre" aria-selected="false">Genre</button>
+          <button role="tab" data-mode="text" aria-selected="false">Describe a mood</button>
+        </div>
+        <form class="search" id="search-form" autocomplete="off" role="search">
+          <input id="search-input" type="text" aria-label="Search" aria-autocomplete="list" aria-controls="suggestions" maxlength="140">
+          <button class="btn btn-primary" type="submit" id="search-submit">Match</button>
+          <ul class="suggestions" id="suggestions" role="listbox" hidden></ul>
+        </form>
+      </div>
+
+      <div class="container" id="status" role="status" aria-live="polite"></div>
+
+      <div class="container" id="query-banner" hidden></div>
+
+      <div class="container" id="results" hidden>
+        <div class="tabs" role="tablist" aria-label="Results">
+          <button role="tab" data-tab="song" aria-selected="false">Songs <span class="tab-count" data-count="song"></span></button>
+          <button role="tab" data-tab="movie" aria-selected="false">Movies <span class="tab-count" data-count="movie"></span></button>
+          <button role="tab" data-tab="genre" aria-selected="false">Genres <span class="tab-count" data-count="genre"></span></button>
+        </div>
+        <p class="panel-caption" id="panel-caption"></p>
+        <div class="grid" id="panel" role="tabpanel"></div>
+      </div>
+
+      <div class="container" id="featured"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <p class="footer-title">Vibe Embeddings</p>
+        <p>Song data and previews from the iTunes Search API and Apple Music charts. Film data from Wikidata and Wikipedia. Posters and photos are shown from Wikipedia and Wikimedia Commons and belong to their owners.</p>
+        <p><a href="https://github.com/Charan7sai/vibe-embeddings" target="_blank" rel="noopener">Source on GitHub</a> · <a href="/docs" target="_blank" rel="noopener">API docs</a></p>
+      </div>
+      <details class="credits">
+        <summary>Image credits</summary>
+        <ul id="credits-list"></ul>
+      </details>
+    </div>
+  </footer>
+
+  <div class="sheet-backdrop" id="sheet-backdrop" hidden></div>
+  <audio id="player" preload="none"></audio>
+  <script src="app.js?v=15"></script>
+</body>
+</html>
