@@ -215,7 +215,7 @@ vibe-embeddings/
 
 - **Song → film is the harder direction for chart pop without a Wikipedia article.** Upbeat production reads as "playful", and comedies use upbeat pop, so such songs can drift towards comedies. Lyrics would help most, but there is no free lyrics source whose terms allow it.
 - **The benchmark is soundtrack-shaped**, mostly orchestral score against its film, which is why sung songs and songs with articles are reported separately.
-- **Catalogs are snapshots.** The pipeline is incremental, so a scheduled job (e.g. weekly GitHub Actions) could keep it current. Anything outside the catalog is already handled by live lookup.
+- **Catalogs are snapshots**, built in October 2026, so "current charts" and "newest films" mean as of then. The pipeline is incremental, so a scheduled job (e.g. weekly GitHub Actions) could keep it current. Anything outside the catalog is already handled by live lookup.
 - **Next steps:** collect survey responses for a human-judged score, add a "last updated" date with scheduled refreshes, and try a lighter static deployment that precomputes recommendations.
 
 ## Author
